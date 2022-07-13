@@ -29,3 +29,9 @@ Server 응답자 <-------> client 요청자( web client)
  ex) apache, IIS, nginx <-->     ex)크롬,사파리
 	   html, css, javascript 요청 및 전달함
 참조사이트 : 생활코딩
+
+* html 팁
+하이퍼링크는 <a>태크씀
+파이참 체크아웃
+
+눌
