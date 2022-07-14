@@ -1,0 +1,61 @@
+AttributeError: 'str' object has no attribute 'decode'  발생
+
+code내용
+token = jwt.encode(payload, app.config['JWT_SECRET_KEY'], 'HS256')
+return jsonify({'access_token': token.decode('UTF-8')})
+
+
+해결방법
+token = jwt.encode(payload, app.config['JWT_SECRET_KEY'], 'HS256')
+return jsonify({'access_token': token})
+>>즉 decode내용 삭제 
+
+
+출처
+https://teddygood.github.io/posts/python/attributeerror-str-decode/
+
+------------------------------------
+
+id와 로그인 방법
+
+
+function is_nickname(asValue) {
+                var regExp = /^(?=.*[a-zA-Z])[-a-zA-Z0-9_.]{2,10}$/;
+                return regExp.test(asValue);
+            }
+
+            function is_password(asValue) {
+                var regExp = /^(?=.*\d)(?=.*[a-zA-Z])[0-9a-zA-Z!@#$%^&*]{8,20}$/;
+                return regExp.test(asValue);
+            }
+
+*[] 반드시포함
+\d 의미는 숫자
+[]는 포함할수 있는 것을
+{숫자,숫자} ex)1~5자리까지 가능
+
+----------------
+javascript
+if(!불라부랄(num)) { }
+느낌표는 not을 의미  !a == not a
+
+
+python
+if A is not None:
+
+-------------------------
+CSS 중앙에 동영상 넣기
+https://www.codingfactory.net/11880
+https://webdir.tistory.com/31
+
+------
+깃허브
+각각의 브렌치를 푸쉬한다. 
+하나씩 브랜치를 메인에 병합.
+병합하면서 충돌변경하고
+완료된 하나의 메인을 다들 풀한다.
+
+
+
+
+스태시>>> 커밋하지 않은 변경값 저장
