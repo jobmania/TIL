@@ -1,0 +1,23 @@
+BREAK 와 Continue 구분하기
+https://hymndev.tistory.com/20
+
+Quiz16
+  == 과 equal은 다르다 !!
+ 참조 https://coding-factory.tistory.com/536
+ 기본 타입의 int형, char형등은 Call by Value 형태로 기본적으로 대상에 주소값을 가지지 않는 형태로 사용됩니다.
+>>> 그래서 char == char 사용해도  괜찬
+String은 equal 쓰는게 맞다!!
+
+   큰따옴표(" ")는 문자열(String)을 감싸는 기호이고
+   작은따옴표(' ')는 문자(Character)를 감싸는 기호이다.
+
+   큰따옴표(" ") 사이에는 문자 여러개를 입력하고
+    작은따옴표(' ') 사이에는 문자 하나만 입력할 수 있다.
+
+Quiz17
+//      조건
+//   if (length != 4 && length != 6)
+//           return false;
+
+Quiz18
+String answer = "김서방은 " +point+"에 있다";

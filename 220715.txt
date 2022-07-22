@@ -1,0 +1,130 @@
+int ;정수타입(변수)
+double ; 실수타입(변수)
+string ; 문자
+final int J(대문자써야함) ; 상수
+
+itemPrice 변수 이름 규칙
+ITEM_PRICE 상수이름 규칙
+
+long bing = 1651686156L; (long타입경우 반드시 뒤에 L을 붙여아함)
+float f = 1234.f;    (float타입경우 반드시 뒤에 L을 붙여아함)
+double d = 34234.123;
+
+강제 형변환
+int y2 = (int) x2;
+
+int i1 = 2;
+int i2 = ++i1; >> i2 = 3, i1 = 3
+int i2 = i1++;  >> i2 = 2, i1=3
+
+대입연산자 뜻
+a += b;  라는 식은
+a = a + b; 와 동일 
+
+레스트풀 api ?
+
+
+println은 띄어쓰기
+print 붙여지는거 
+
+삼항연산자 
+a > b ? 3 : 2 
+
+swtich 조건문  사용방법 
+switch, case , default, breaak 
+
+  // 다음과 같이 case문을 한번에 사용하면 더 짧게 코드를 짤 수 있습니다.
+        switch(month) {
+            case 1:
+            case 2:
+            case 12:
+                season = "겨울";
+                break;
+            case 3:
+            case 4:
+            case 5:
+                season = "봄";
+                break;
+            case 6:
+            case 7:
+            case 8:
+                season = "여름";
+                break;
+            case 9:
+            case 10:
+            case 11:
+                season = "가을";
+                break;
+        }
+        System.out.println("지금은 " + month + "월이고, " + season + "입니다.");
+
+
+while 예시)
+
+while(i < 11){
+            // if 문을 추가해, i가 짝수일때만 i를 출력하는 코드를 짜보세요.
+            if (i%2==0){
+                     System.out.println(i);
+            }
+            i++; 
+        }
+do while은 한번이라도 실행되면 좋겟다 일때 쓴다.
+
+continue와 break; 에 대해 이해하자  
+continue 중지하고 다시 위의 반복문 처음으로 돌아가지만
+break 중지하고 반복문에서 나온다
+
+!!!!!!!배열에 대해 이해하자
+배열 생성방법
+int [ ] array1 = new int[100];
+타입형 [] 이름 = new 타입[갯수];
+또는 
+int [ ] array2 = { 1, 2, 3, 4, ~~} 
+
+
+!!! 변수는 생성된 반복문이나 { }에서만 존재, 나오면 소멸함! 
+>>> 변수의 스코프(변수의 유효범위)
+
+2차원 배열 
+int [ ][] array = new int[3][4];
+   ㅁㅁㅁㅁ
+   ㅁㅁㅁㅁ
+   ㅁㅁㅁㅁ
+ex) int [][] array 5 = new int[3][];
+    array5 [0][0] = 10; >>> 하면 오류발생함  왜냐? 1첫번째 생성안햇기때문
+
+   int [][] array 5 = new int[3][];
+   array5[0] = new int[1];
+ array5 [0][0] = 10;   >> 이렇게 생성하고 입력해야함
+
+
+for each 구문!
+    int[] iarr = {10,20,30,40,50};
+
+    for( int value:iarr){
+        System.out.println(value);
+    }
+이것은 아래와 동일하다!! 
+for( int value =0 ; i< arr.length; i++{
+      System.out.println(value);}
+
+
+
+
+내일은 클래스 관련 수업을 들을 예정이다.
+
+
+
+마인드 팁!!!!
+http://egloos.zum.com/agile/v/5749946
+http://egloos.zum.com/agile/v/5838463
+
+코드리뷰사이트!!
+aws codeguru 
+github codepilot
+codereview automatic
+lint
+정적분석도구
+
+알고리즘 공부 팁 !!
+https://steady-coding.tistory.com/260
