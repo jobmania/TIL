@@ -1,6 +1,4 @@
-학습자료 다보기
-팀과제는 틈틈히하기
-일부를 가져와 동작 이해 방식을 이해하기.
+학습자료 다보기, 팀과제는 틈틈히하기, 일부를 가져와 동작 이해 방식을 이해하기.
 
 
 서버사이드 = 백엔드
@@ -8,3 +6,90 @@
 WIL 작성은
 객체지향 프로그래밍이란???
 JVM이란???
+
+-----------------------------
+List<String> newList = new ArrayList<>();
+newList.add("웹개발의 봄 Spring");
+newList.add("프론트엔드의 꽃 React");
+System.out.println(newList);
+System.out.println(newList.get(0));
+System.out.println(newList.get(1));
+newList.remove(0);
+System.out.println(newList);
+
+
+정보를 묶을 때 List 라는 녀석을 사용합니다. 세 가지를 기억하시면 돼요.
+1. 순서가 중요한 녀석이에요!
+2. 같은 자료형만 넣을 수 있어요
+3. 넣을 때는 add, 조회할 때는 get, 제거할 때는 remove를 사용합니다.
+
+------------------------------------
+private한 변수를 바꾸고 싶을때 
+ // setter의 형태 
+    public void setTitle(String title ){
+        this.title = title;
+    }
+
+--------------------------------
+private한 변수를 가져오고 싶을 때 
+ //Getter
+    public String getTitle( )   {
+        return this.title;
+    }
+-----------------------
+스프링봄 강의 1-11 (Controller)
+- Rest 란 ?  
+    - 서버의 응답이 JSON 형식임을 나타냅니다.
+    - HTML, CSS 등을 주고받을 때는 Rest 를 붙이지 않습니다.
+	
+-----------------------------
+스프링봄 강의 1-12 gradle 배포하거나 라이브러리에서 들고 올때 사용한다.~
+maven repository에서 다른사람의 코드를 복사
+build.gradle에 dependencies {  }에 붙여넣어준다. 
+
+찾아보면 좋을 키워드 
+Spring Boot vs Node.js
+https://jaehoney.tistory.com/167
+Gradle vs Maven
+https://gradle.org/maven-vs-gradle/
+ Rest API
+
+
+---------------------------------------------
+스프링봄 2-1강
+RDBMKS = 관계형 데이터 베이스 
+Spring은 java, Datbase는 SQL로 작동한다.
+JPA는 서버와 DB사이의 번역기!
+-------------------------------------
+스프링봄 2-3강
+
+데이터 베이스 = 고도화된 엑셀
+엑셀 시트 하나당 = 테이블 하나!
+엑셀 행 하나당 = 데이터 !
+
+SQL문법 정리! (1. 생성)
+CREATE TABLE IF NOT EXISTS courses (
+    id bigint(5) NOT NULL AUTO_INCREMENT, 
+    title varchar(255) NOT NULL,
+    tutor varchar(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+///////////
+bigint = java의 int,  varchar = string ,  
+PRIMARY KEY (id) 아이디를 구분할수있는 녀석으로 삼겠다.
+ AUTO_INCREMENT,  id를 자동으로 증가시켜줘
+~~~~~~~~~~~~~~~~~~
+SQL문법 정리! (2.. 데이터 삽입)
+INSERT INTO courses (title, tutor) VALUES
+    ('웹개발의 봄, Spring', '남병관'), ('웹개발 종합반', '이범규');
+~~~~~~~~~~~~~~~~~~~~~~~~
+SQL문법 정리!(3. 데이터 조회_)
+SELECT * FROM courses;
+
+-----------------------
+스프링봄 2-4강 
+Domain(Entity)은 Table ! Repository는 SQL과 동일한 역할이다!
+
+Domain과 Repository 저장위치 확인하기.
+인터페이스는 메소드만 잔뜩 모여져 있는 곳이다.
+JPA도 여기에만 있을 수 있다.(Repository) 
