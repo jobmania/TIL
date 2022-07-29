@@ -1,0 +1,28 @@
+스프링봄 강의 3-5
+멤버 변수들에는 private , 그리고 final을 붙이자. 
+
+@GetMapping("/api/memos")
+    public List<Memo> readMemo(@RequestBody MemoRequestDto requestDto){
+       return memoRepository.findAllByOrderByModifiedAtDesc();
+~~~~~~~~~~~~~~~~~~
+!!!중요사항!!!
+@PathVariable Long id, @RequestBody MemoRequestDto memoRequestDto
+PathVariable : ID가 지나갈수 있게 해줘!!
+RequestBody ; 바디안에 있는 내용을 꼭 넣어줘!! 
+
+
+------------------
+스프링봄 강의 3-9 
+JQUERY 임포트시 헤드태크사이에!!
+
+------------------------
+스프링봄 강의 3-14
+Timestamped @getter 사용해서 조회시간 가져올수 잇게
+application 클래스에 @EnableJpaAuditing 를 넣어야지 수정시간 반영이 된다.
+ALT+J 다중선택!!
+-----------
+스프링봄 강의 숙제
+***24시간 이내 최신으로 불러와라 
+1. JPA 불러오는 방식을 수정해야하고
+2. controller에서 
+https://ssong915.tistory.com/33

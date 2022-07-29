@@ -1,0 +1,139 @@
+# 220728
+## 과제제출
+1. 수정, 삭제 API의 request를 어떤 방식으로 사용하셨나요? (param, query, body)
+https://medium.com/@bouncewind0105/request-param-query-body-%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90-2e7e4fddd8b9
+https://velog.io/@leyuri/TILRequest-paramquery-body-%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90
+
+- body를 사용해서 JSON 방식으로
+
+1. req.param
+주소에 포함된 변수를 담는다. 예를 들어 https://naver.com/post/12345 라는 주소가 있다면 12345를 담는다. 서버에서 Path Variable 로 칭한다.
+/// 여기서 각각의 id값으로 변수를 담아 api를 컨트롤 하였다.
+
+2.req.query
+주소 바깥, ? 이후의 변수를 담는다. 예를 들어 https://naver.com/post?query=아디다스 일 경우 아디다스를 담는다. &을 연결하여 여러개의 데이터를 넘길 수 있다. 
+서버에서는 Query parameter라고 한다.
+
+
+3. req.body
+XML, JSON, Multi Form 등의 데이터를 담는다. 여기서 우리는 title, author등등 해당 데이터를 ARC를 이용해 body값들을 입력, 들고 올때도 json형식으로  DATA를 이동하여 담았다. 그래서  body형식이라고 생각한다. 
+
+
+------------------------------------------------------------------------------
+2. 어떤 상황에 어떤 방식의 request를 써야하나요?
+ 제생각은  param 같은 방식은 id와 같이 식별가능한 변수를 활용해야할 때 적절하다고 생각하며, query는 &를 통해 여러가지 정보를 담아 여러기능을 구현할 수 있기 때문에 (ex 최저가 정렬, 최신정렬) 예시방식을 사용할 때 활용하면 될 것같습니다.
+body방식은 @Request body의  Body에 기록된 많은 변수를 사용자가 뽑아 사용할 때 적절하다고 생각한다.     
+
+https://inpa.tistory.com/entry/EXPRESS-%F0%9F%93%9A-reqparams-reqquery-reqbody-%F0%9F%A4%94-%EC%A0%95%EB%A6%AC
+---------------------------------------------------------------------------
+
+3. RESTful한 API를 설계했나요? 어떤 부분이 그런가요? 어떤 부분이 그렇지 않나요?
+RESTful 기준이  
+1.Server-Client(서버-클라이언트 구조)
+원이 있는 쪽이 Server, 자원을 요청하는 쪽이 Client가 되며, 서로간의 의존성이 낮다.
+2.Stateless(무상태) : 클라이언트-서버 커뮤니케이션: 요청 간에 클라이언트 정보가 저장되지 않으며, 각 요청이 분리되어 있고 서로 연결되어 있지 않음
+3.Cacheable(캐시 처리 가능) : 클라이언트-서버 상호 작용을 간소화하는 캐시 가능 데이터
+4.Layered System(계층화) : Client는 REST API Server만 호출한다.
+등이 있는데 
+
+우선은 CRUD기능을 충족을하며 서버의 Data가 나에게 저장되지 않기 때문에 1,2번은 충족하며 아직 3번은 활용하지 못해서 충족하지 못했다고 생각한다.  현재 기능구 현 api들은  4번을 충족했다고 생각한다. 
+
+https://gmlwjd9405.github.io/2018/09/21/rest-and-restful.html
+https://www.redhat.com/ko/topics/api/what-is-a-rest-api
+-------------------------------------------------------------------
+4. 적절한 관심사 분리를 적용하였나요? (Controller, Repository, Service)
+Controller란 클라이언트의 요청 받고 및 응답을 하는  역할이며 받은 요청에 따라 Service에게 변수, 메소드를 활용하게 하며 이후 DB정보들을 Repository에게 주면, DB의 CRUD작업을 처리한다 
+
+DTO를 여러개 만들어 원하는 데이터를 뽑고 처리하는데 
+
+https://velog.io/@jybin96/Controller-Service-Repository-%EA%B0%80-%EB%AC%B4%EC%97%87%EC%9D%BC%EA%B9%8C
+https://velog.io/@sezeom/Controller-Service-Repository-%EB%B6%84%EB%A6%AC-%EC%9D%B4%EC%9C%A0
+
+--------------------------------------------------
+5. 작성한 코드에서 빈(Bean)을 모두 찾아보세요!
+Spring IoC 컨테이너가 관리하는 자바 객체를 빈(Bean)이라는 용어로 부른다.
+Spring에 의하여 생성되고 관리되는 자바 객체를 Bean이라고함 .
+우리가 new 연산자로 어떤 객체를 생성했을 때 그 객체는 빈이 아니다.
+
+Controller ,Service, Repository,  << 이 빈에 해당 된다고 생각합니다.
+
+https://melonicedlatte.com/2021/07/11/232800.html
+https://youngjinmo.github.io/2021/06/bean-component/
+--------------------------------------
+
+6조 조별자료
+https://www.notion.so/6-63afc2ce0e8541c4b169201e6ae27001
+
+JPA
+-------------------------------
+
+## 스프링 심화과정 1강 
+- 현업 개발 플로우
+    요구사항 분석 → 설계 → 구현 (프로그래밍) → 테스트 → 유지보수
+https://devuna.tistory.com/103
+
+1. 우선 api 먼저 설계를 시작한다. 
+
+## 참고 . 스프링봄 4강 14.  스케줄러 만들기 
+   cron = 정해진 시간에 실행되도록. 
+src > main > java > com.sparta.week04 > utils 에 Scheduler.java  생성
+
+@RequiredArgsConstructor // final 멤버 변수를 자동으로 생성합니다.
+@Component // 스프링이 필요 시 자동으로 생성하는 클래스 목록에 추가합니다.
+public class Scheduler {
+
+    private final ProductRepository productRepository;
+    private final ProductService productService;
+    private final NaverShopSearch naverShopSearch;
+
+    // 초, 분, 시, 일, 월, 주 순서
+    @Scheduled(cron = "0 0 1 * * *")
+    public void updatePrice() throws InterruptedException {
+        System.out.println("가격 업데이트 실행");
+        // 저장된 모든 관심상품을 조회합니다.
+        List<Product> productList = productRepository.findAll();
+        for (int i=0; i<productList.size(); i++) {
+            // 1초에 한 상품 씩 조회합니다 (Naver 제한)
+            TimeUnit.SECONDS.sleep(1);
+            // i 번째 관심 상품을 꺼냅니다.
+            Product p = productList.get(i);
+            // i 번째 관심 상품의 제목으로 검색을 실행합니다.
+            String title = p.getTitle();
+            String resultString = naverShopSearch.search(title);
+            // i 번째 관심 상품의 검색 결과 목록 중에서 첫 번째 결과를 꺼냅니다.
+            List<ItemDto> itemDtoList = naverShopSearch.fromJSONtoItems(resultString);
+            ItemDto itemDto = itemDtoList.get(0);
+            // i 번째 관심 상품 정보를 업데이트합니다.
+            Long id = p.getId();
+            productService.updateBySearch(id, itemDto);
+        }
+    }
+}
+
+서비스에서 생성
+@RequiredArgsConstructor // final로 선언된 멤버 변수를 자동으로 생성합니다.
+@Service // 서비스임을 선언합니다.
+public class ProductService {
+
+    @Transactional // 메소드 동작이 SQL 쿼리문임을 선언합니다.
+    public Long updateBySearch(Long id, ItemDto itemDto) {
+        Product product = productRepository.findById(id).orElseThrow(
+                () -> new NullPointerException("해당 아이디가 존재하지 않습니다.")
+        );
+        product.updateByItemDto(itemDto);
+        return id;
+    }
+}
+
+이후 객체에 업데이트를 한다 
+
+--------------------------------------------------
+
+## 스프링 심화 1.7강 Controller 사용이유 !
+Survelt에서 중복내용을 Spring에서 해줌 .
+
+JSP를 쓰면 Survlet을 쓸 수 밖에 없다..
+
+------------------------------------------------
+람다식 Functional  함수형 프로그래밍 .. 
+https://mangkyu.tistory.com/111

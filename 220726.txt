@@ -1,0 +1,61 @@
+## 220726
+스프링봄 4강 -3
+
+주소 규칙 ? 뒤에는 내가 같이 가지고 가는 녀석들이다.
+주소 규칙 & 는 and 의미, 검색조건을 뒤에 붙인다. 
+
+
+항해톡
+* OSI 7계층 ;
+*프로세스 vs 스레드
+* DB INDEX
+* N NP NPC
+
+https://velog.io/@ljinsk3/JPA로-인덱스-사용하기
+
+https://coding-factory.tistory.com/608
+
+https://velog.io/@pyunj0607/JAVA-Getter-Setter에-대해
+
+
+
+
+----------------------------------------
+JPA, 영속성 
+
+https://book.interpark.com/product/BookDisplay.do?_method=detail&sc.prdNo=240925953&gclid=Cj0KCQjwof6WBhD4ARIsAOi65ajIJYa3ZWluhREXg6W8sdQQ7nahhbVQ0ktah_F65FYbkI7SnsZqW8IaAt8WEALw_wcB
+
+    압축: https://ultrakain.gitbooks.io/jpa/content/chapter1/chapter1.html
+
+스프링 입문을 위한 자바 객체
+
+http://www.yes24.com/Product/Goods/17350624
+
+
+
+-----------------------------
+Getter 한번더 정리 
+ private한 클래스나 변수를 외부 클래스에서 조회하려면 Getter를
+
+
+
+
+--------------
+db index !!
+
+  메모리 내용...
+
+key       value
+id           주소
+
+
+pk = 
+--------------------
+
+DTO에 GETTER, SETTER 붙이는거 잊지말자
+
+
+@exceptionHandler 예외처리
+
+
+

@@ -1,0 +1,47 @@
+-------------------------
+# 22.07.25
+## 스프링봄 4강 1
+기본기 숙달 : 3계층(Controller, Service, Repository) 숙달과 API handling은 무엇보다 중요한 기본기
+
+주소 규칙 ? 뒤에는 내가 같이 가지고 가는 녀석들이다.
+주소 규칙 & 뒤에는 정렬 규칙등 오름차순,날짜순
+
+--------------------------
+복습
+Repo사용방법 
+findby변수and변수 >> 둘다찾아라 
+
+
+---
+실전프로젝트 
++ 중요한것은 기술적난이도 및 완성
+-----------------------
+5. 게시글 비밀번호 확인 API
+- 비밀번호를 입력 받아 해당 게시글의 비밀번호와 일치여부 판단하기
+6. 게시글 수정 API
+- 제목, 작성자명, 비밀번호, 작성 내용을 수정되게 하기
+7. 게시글 삭제 API
+- 글이 삭제되게 하기
+
+
+
+Controlle는 최대한 깔끔하게 최소한 구현
+
+Service에서 최대한 구현
+
+-----------------------------
+1. Spring Boot vs Node.js
+2. Gradle vs Maven
+3. Rest API
+
+1. RDBMS vs NoSQL
+2. JPA
+3. Repository
+
+1. Rest API Rule (cf. https://velog.io/@pjh612/REST-API-URI-규칙)
+2. DTO
+3. PUT vs PATCH (cf.https://rapidapi.com/blog/put-vs-patch/)
+
+1. OOP vs PP (cf. https://lxxyeon.tistory.com/86)
+
+

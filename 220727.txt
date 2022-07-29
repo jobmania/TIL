@@ -1,0 +1,53 @@
+# 22.07.27
+
+
+mapping에 대한 사용방법
+https://cpdev.tistory.com/133
+
+스프링 빈에 대해서 
+https://www.youtube.com/watch?v=3gURJvJw_T4
+
+
+
+-------------------
+### 스프링봄 4.6강
+
+@MappedSuperclass // 상속한 클래스에 멤버 변수가 컬럼이 되도록 합니다.
+
+private final ProductRepository productRepository; 
+// RestController에게 이녀석은 꼭 필요한 녀석인 것을 알려줌 .
+@RequiredArgsConstructor 
+// final로 선언된 멤버 변수를 자동으로 생성합니다
+----------------
+### 스프링봄 4.9강 
+@Component // 라고 등록하면 Service나 Entity처럼 스프링이 권한획득.
+
+
+
+BEAN VS COMPONENET 차이에 대해서 
+BEAN 내가 관리하는거다 > 외부
+COMPONENET > 내부 
+
+BEAN 객체 1개만 존재,
+
+
+git bash jpa 다운업그레이드 
+sudo apt-get install openjdk-11-jdk
+sudo apt-get install openjdk-8-jdk
+
+
+
++ 디버그 
+알고리즘 풀때 하나씩 실행해서 좋은 거 같다.]
+
+
+
+---------
+과제제출
+1. 수정, 삭제 API의 request를 어떤 방식으로 사용하셨나요? (param, query, body)
+https://medium.com/@bouncewind0105/request-param-query-body-%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90-2e7e4fddd8b9
+
+2. 어떤 상황에 어떤 방식의 request를 써야하나요?
+3. RESTful한 API를 설계했나요? 어떤 부분이 그런가요? 어떤 부분이 그렇지 않나요?
+4. 적절한 관심사 분리를 적용하였나요? (Controller, Repository, Service)
+5. 작성한 코드에서 빈(Bean)을 모두 찾아보세요!
